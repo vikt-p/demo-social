@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -53,11 +53,11 @@ let AppContainer= compose (
 
 
    const SamuraiJsApp=(props)=> {
-    return <BrowserRouter>
+    return <HashRouter>
            <Provider store={store}>
                <AppContainer/>
            </Provider>
-       </BrowserRouter>;
+       </HashRouter>;
    }
 
     export default SamuraiJsApp;
