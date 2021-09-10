@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter, HashRouter, Route} from "react-router-dom";
+import {HashRouter, Route, withRouter} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -12,8 +11,6 @@ import {connect, Provider} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/Common/Preloader";
 import {compose} from "redux";
-import {withRouter} from "react-router-dom";
-import ReactDOM from "react-dom";
 import store from "./redux/redux-store";
 
 class App extends React.Component {
